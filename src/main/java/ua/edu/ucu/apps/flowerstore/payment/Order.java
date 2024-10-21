@@ -2,8 +2,8 @@ package ua.edu.ucu.apps.flowerstore.payment;
 
 import java.util.List;
 
+import ua.edu.ucu.apps.flowerstore.Item;
 import ua.edu.ucu.apps.flowerstore.delivery.Delivery;
-import ua.edu.ucu.apps.flowerstore.flower.Item;
 
 public class Order {
     private List<Item> items;

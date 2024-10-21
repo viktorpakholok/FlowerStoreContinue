@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class FlowerController {
     @GetMapping("flower") // ("/hello")
 	public List<Flower> helloWorld() {
-		return List.of(new Flower(100, FlowerType.CHAMOLILE, 100));
+		return List.of(new Flower(100, FlowerColor.BLUE, 10, FlowerType.CHAMOMILE));
 	}
 }
