@@ -5,7 +5,7 @@ import ua.edu.ucu.apps.flowerstore.Item;
 
 public class PostDeliveryStrategy implements Delivery {
     private String deliveryNotification 
-    = Delivery.DeliveryNotification + "post";
+    = Delivery.DELIVERY_NOTIFICATION + "post";
 
     public void deliver(List<Item> items) {
         System.out.println(

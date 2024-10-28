@@ -7,13 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class FlowerController {
-	private static final double Price = 100;
-	private static final int SepalLength = 10;
+    private static final double PRICE = 100;
+    private static final int SPEAL_LENGTH = 10;
 
     @GetMapping("flower") // ("/hello")
-	public List<Flower> helloWorld() {
-		return List.of(
-			new Flower(Price, FlowerColor.BLUE, SepalLength, FlowerType.CHAMOMILE)
-		);
-	}
+    public List<Flower> helloWorld() {
+        return List.of(
+            new Flower(
+                PRICE, FlowerColor.BLUE, SPEAL_LENGTH, FlowerType.CHAMOMILE)
+        );
+    }
 }

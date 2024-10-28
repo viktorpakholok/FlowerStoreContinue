@@ -1,7 +1,7 @@
 package ua.edu.ucu.apps.flowerstore.payment;
 
 public interface Payment {
-    String Description = "by "; 
+    String DESCRIPTION = "by "; 
     void pay(double price);
 
     // public Payment() {
