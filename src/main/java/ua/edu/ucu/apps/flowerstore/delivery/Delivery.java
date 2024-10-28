@@ -1,5 +1,10 @@
 package ua.edu.ucu.apps.flowerstore.delivery;
 
-public class Delivery {
-    public String deliveryNotification = "Delivery";
+import java.util.List;
+import ua.edu.ucu.apps.flowerstore.Item;
+
+public interface Delivery {
+    public String deliveryNotification = "delivered by ";
+
+    public void deliver(List<Item> items);
 }

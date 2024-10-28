@@ -1,18 +1,10 @@
 package ua.edu.ucu.apps.flowerstore.payment;
-import java.util.List;
 
-import ua.edu.ucu.apps.flowerstore.Item;
-
-public class CreditCardPaymentStrategy {
-    private String description;
+public class CreditCardPaymentStrategy implements Payment {
+    private String description = Payment.description + "credit card";
     
-    // @Override
-    // public double pay(List<Item> items) {
-    //     double price = 0;
-    //     for (Item item : items) {
-    //         price += item.getPrice();
-    //     }
-
-    //     return price;
-    // }
+    @Override
+    public void pay(double price) {
+        System.out.println(description);
+    }
 }
