@@ -19,11 +19,17 @@ public class Order {
     }
 
     public double calculateTotalPrice() {
-        return 0;
+        double res = 0;
+        for (Item item : items) {
+            res += item.price();
+        }
+        return res;
     }
 
     public void ProcesOrder() {
-
+        payment.pay(calculateTotalPrice());
+        delivery.deliver(items);
+        System.out.println("Your order is processed");
     }
 
     public void addItem(Item item) {
