@@ -4,7 +4,7 @@ import ua.edu.ucu.apps.flowerstore.Item;
 
 public class RibbonDecorator extends ItemDecorator {
     private Item item;
-    private final static double RIBBON_PRICE = 40;
+    private static final double RIBBON_PRICE = 40;
 
     public double price() {
         return RIBBON_PRICE + item.price();

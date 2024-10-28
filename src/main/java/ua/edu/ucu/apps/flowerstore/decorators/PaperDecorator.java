@@ -4,7 +4,7 @@ import ua.edu.ucu.apps.flowerstore.Item;
 
 public class PaperDecorator extends ItemDecorator {
     private Item item;
-    private final static double PAPER_PRICE = 13;
+    private static final double PAPER_PRICE = 13;
 
     public double price() {
         return PAPER_PRICE + item.price();
