@@ -4,9 +4,12 @@ import java.util.List;
 import ua.edu.ucu.apps.flowerstore.Item;
 
 public class PostDeliveryStrategy implements Delivery {
-    private String deliveryNotification = Delivery.deliveryNotification + "post";
+    private String deliveryNotification 
+    = Delivery.DeliveryNotification + "post";
 
     public void deliver(List<Item> items) {
-        System.out.println("Your items: " + items.toString() + " are " + deliveryNotification);
+        System.out.println(
+            "Your items: " + items.toString() + " are " + deliveryNotification
+        );
     }
 }

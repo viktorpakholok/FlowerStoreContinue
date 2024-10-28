@@ -1,7 +1,7 @@
 package ua.edu.ucu.apps.flowerstore.payment;
 
 public class PayPalPaymentStrategy implements Payment {
-    private String description = Payment.description + "PayPal";
+    private String description = Payment.Description + "PayPal";
     
     @Override
     public void pay(double price) {

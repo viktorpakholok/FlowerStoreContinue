@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PaymentController {
 
-    // @GetMapping
-    // public List<Payment> getPayments() {
-    //     return List.of(new CreditCardPaymentStrategy());
-    // }
+    @GetMapping
+    public List<Payment> getPayments() {
+        return List.of(new CreditCardPaymentStrategy());
+    }
 }

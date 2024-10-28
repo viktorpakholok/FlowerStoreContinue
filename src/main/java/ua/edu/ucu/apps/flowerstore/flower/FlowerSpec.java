@@ -6,7 +6,7 @@ import lombok.Setter;
 @Getter @Setter
 public class FlowerSpec {
     private FlowerColor color;
-    private int sepalLength;
+    private double sepalLength;
     private FlowerType flowerType;
 
     public FlowerSpec() {
@@ -14,7 +14,7 @@ public class FlowerSpec {
     }
 
     public FlowerSpec(
-        FlowerColor color, int sepalLength, FlowerType flowerType) {
+        FlowerColor color, double sepalLength, FlowerType flowerType) {
         this.color = color;
         this.sepalLength = sepalLength;
         this.flowerType = flowerType;

@@ -10,12 +10,12 @@ public class Order {
     private Payment payment;
     private Delivery delivery;
 
-    public void setPaymentStrategy(Payment payment) {
-        this.payment = payment;
+    public void setPaymentStrategy(Payment newPayment) {
+        this.payment = newPayment;
     }
 
-    public void setDeliveryStrategy(Delivery delivery) {
-        this.delivery = delivery;
+    public void setDeliveryStrategy(Delivery newDelivery) {
+        this.delivery = newDelivery;
     }
 
     public double calculateTotalPrice() {
@@ -26,7 +26,7 @@ public class Order {
         return res;
     }
 
-    public void ProcesOrder() {
+    public void procesOrder() {
         payment.pay(calculateTotalPrice());
         delivery.deliver(items);
         System.out.println("Your order is processed");

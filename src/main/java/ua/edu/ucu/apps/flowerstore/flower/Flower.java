@@ -15,7 +15,7 @@ public class Flower extends FlowerSpec {
     public Flower(
         double price, 
         FlowerColor color, 
-        int sepalLength, 
+        double sepalLength, 
         FlowerType flowerType) {
         super(color, sepalLength, flowerType);
         this.price = price;

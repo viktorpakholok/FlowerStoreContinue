@@ -4,7 +4,7 @@ import java.util.List;
 import ua.edu.ucu.apps.flowerstore.Item;
 
 public interface Delivery {
-    public String deliveryNotification = "delivered by ";
+    String DeliveryNotification = "delivered by ";
 
-    public void deliver(List<Item> items);
+    void deliver(List<Item> items);
 }

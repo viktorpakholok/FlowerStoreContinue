@@ -1,7 +1,7 @@
 package ua.edu.ucu.apps.flowerstore.payment;
 
 public class CreditCardPaymentStrategy implements Payment {
-    private String description = Payment.description + "credit card";
+    private String description = Payment.Description + "credit card";
     
     @Override
     public void pay(double price) {

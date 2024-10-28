@@ -1,12 +1,8 @@
 package ua.edu.ucu.apps.flowerstore.payment;
 
-import java.util.List;
-
-import ua.edu.ucu.apps.flowerstore.Item;
-
 public interface Payment {
-    final String description = "by "; 
-    public void pay(double price);
+    String Description = "by "; 
+    void pay(double price);
 
     // public Payment() {
     //     this.desctiption = "Paid by credit card";
