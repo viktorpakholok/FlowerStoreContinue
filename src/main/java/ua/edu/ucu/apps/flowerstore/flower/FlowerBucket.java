@@ -10,11 +10,11 @@ public class FlowerBucket {
         flowerPacks = new ArrayList<>();
     }
 
-    public void add(FlowerPack flowerPack) {
+    public void addFlowers(FlowerPack flowerPack) {
         flowerPacks.add(flowerPack);
     }
 
-    public double getPrice() {
+    public double price() {
         double price = 0;
         for (FlowerPack flowerPack: flowerPacks) {
             price += flowerPack.getPrice();
@@ -22,7 +22,7 @@ public class FlowerBucket {
         return price;
     }
 
-    public boolean search(FlowerSpec flowerSpec) {
+    public boolean searchFlower(FlowerSpec flowerSpec) {
         for (FlowerPack flowerPack : flowerPacks) {
             if (flowerPack.matches(flowerSpec)) {
                 return true;

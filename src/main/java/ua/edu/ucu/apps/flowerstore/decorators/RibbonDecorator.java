@@ -5,7 +5,7 @@ import ua.edu.ucu.apps.flowerstore.Item;
 public class RibbonDecorator extends ItemDecorator {
     private Item item;
 
-    public double getPrice() {
+    public double price() {
         return 40 + item.price();
     }
 

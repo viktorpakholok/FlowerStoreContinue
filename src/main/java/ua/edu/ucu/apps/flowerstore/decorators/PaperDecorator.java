@@ -5,7 +5,7 @@ import ua.edu.ucu.apps.flowerstore.Item;
 public class PaperDecorator extends ItemDecorator {
     private Item item;
 
-    public double getPrice() {
+    public double price() {
         return 13 + item.price();
     }
 

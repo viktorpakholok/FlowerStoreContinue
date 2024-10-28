@@ -5,7 +5,7 @@ import java.util.List;
 import ua.edu.ucu.apps.flowerstore.Item;
 
 public interface Payment {
-    final String description = "Paid by "; 
+    final String description = "by "; 
     public void pay(double price);
 
     // public Payment() {
