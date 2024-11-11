@@ -19,6 +19,16 @@ public class Flower extends Item {
         this.price = price;
     }
 
+    // copy constructor
+    public Flower(Flower flower) {
+        price = flower.getPrice();
+        flowerSpec = flower.getFlowerSpec();
+
+        setColor(flower.getColor());
+        setSepalLength(flower.getSepalLength());
+        setFlowerType(flower.getFlowerType());
+    }
+
     public FlowerColor getColor() {
         return FlowerColor.getColor(flowerSpec.getColor());
     }
@@ -43,21 +53,11 @@ public class Flower extends Item {
         flowerSpec.setFlowerType(flowerType);
     }
 
-    // copy constructor
-    public Flower(Flower flower) {
-        price = flower.getPrice();
-        flowerSpec = flower.getFlowerSpec();
-
-        setColor(flower.getColor());
-        setSepalLength(flower.getSepalLength());
-        setFlowerType(flower.getFlowerType());
-    }
-
     public double price() {
         return price;
     }
 
-    public boolean matches(FlowerSpec flowerSpec) {
-        return getFlowerSpec().matches(flowerSpec);
+    public boolean matches(FlowerSpec otherFlowerSpec) {
+        return getFlowerSpec().matches(otherFlowerSpec);
     }
 }
