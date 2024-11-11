@@ -1,4 +1,4 @@
-package ua.edu.ucu.apps.flowerstore.payment;
+package ua.edu.ucu.apps.flowerstore.delivery;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,25 +17,21 @@ import ua.edu.ucu.apps.flowerstore.flower.FlowerSpec;
 import ua.edu.ucu.apps.flowerstore.flower.FlowerType;
 
 @RestController
-@RequestMapping("/payment")
-public class PaymentController {
-    private Payment payment;
+@RequestMapping("/delivery")
+public class DeliveryController {
+    private Delivery delivery;
 
     private static final double PRICE_ONE = 100;
     private static final double PRICE_TWO = 25;
     private static final int SEPAL_LENGTH_ONE = 10;
     private static final int SEPAL_LENGTH_TWO = 2;
 
-    public PaymentController() {
-        this.payment = new PayPalPaymentStrategy();
+    public DeliveryController() {
+        delivery = new PostDeliveryStrategy();
     }
-
-    public void setPayment(Payment payment) {
-        this.payment = payment;
-    }
-
+    
     @GetMapping
-    public String getPayments() {
+    public String deliverItems() {
         List<Item> items = new ArrayList<>();
         FlowerBucket flowerBucket = new FlowerBucket();
         flowerBucket.addFlowers(new FlowerPack(new Flower(PRICE_ONE, new FlowerSpec(FlowerColor.GREEN, SEPAL_LENGTH_ONE, FlowerType.CACTUS)), 3));
@@ -43,6 +39,6 @@ public class PaymentController {
         items.add(flowerBucket);
         items.add(new PaperDecorator(new Flower(PRICE_TWO, new FlowerSpec(FlowerColor.WHITE, SEPAL_LENGTH_TWO, FlowerType.ROMASHKA))));
 
-        return payment.pay(items);
+        return delivery.deliver(items);
     }
 }

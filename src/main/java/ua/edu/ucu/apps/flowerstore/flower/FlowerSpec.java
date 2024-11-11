@@ -2,8 +2,9 @@ package ua.edu.ucu.apps.flowerstore.flower;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
-@Getter @Setter
+@Getter @Setter @ToString
 public class FlowerSpec {
     private FlowerColor color;
     private double sepalLength;

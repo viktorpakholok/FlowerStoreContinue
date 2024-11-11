@@ -3,7 +3,11 @@ package ua.edu.ucu.apps.flowerstore.flower;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlowerBucket {
+import lombok.ToString;
+import ua.edu.ucu.apps.flowerstore.Item;
+
+@ToString
+public class FlowerBucket extends Item {
     private List<FlowerPack> flowerPacks;
 
     public FlowerBucket() {

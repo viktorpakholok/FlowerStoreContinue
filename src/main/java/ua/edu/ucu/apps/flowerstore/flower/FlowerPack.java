@@ -1,6 +1,8 @@
 package ua.edu.ucu.apps.flowerstore.flower;
 
+import lombok.ToString;
 
+@ToString
 public class FlowerPack {
     private int quantity;
     private Flower flower;

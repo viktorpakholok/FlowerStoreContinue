@@ -1,12 +1,12 @@
 package ua.edu.ucu.apps.flowerstore.payment;
 
-import java.util.List;
+import java.util.LinkedList;
 
 import ua.edu.ucu.apps.flowerstore.Item;
 import ua.edu.ucu.apps.flowerstore.delivery.Delivery;
 
 public class Order {
-    private List<Item> items;
+    private LinkedList<Item> items;
     private Payment payment;
     private Delivery delivery;
 

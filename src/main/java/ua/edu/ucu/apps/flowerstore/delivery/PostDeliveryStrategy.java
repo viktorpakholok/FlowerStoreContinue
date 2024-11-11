@@ -7,8 +7,8 @@ public class PostDeliveryStrategy implements Delivery {
     private String deliveryNotification 
     = Delivery.DELIVERY_NOTIFICATION + "post";
 
-    public void deliver(List<Item> items) {
-        System.out.println(
+    public String deliver(List<Item> items) {
+        return (
             "Your items: " + items.toString() + " are " + deliveryNotification
         );
     }
